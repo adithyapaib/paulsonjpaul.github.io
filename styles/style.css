@@ -1,0 +1,923 @@
+/* 
+===================
+
+* Welcome! Here is an index for you:
+
+1. Variables
+2. Mixins
+3. Resets
+4. Document Style
+5. Header
+6. Hero Section
+7. Social Icons
+8. About Section
+9. Skills Section
+10. Portfolio Section
+11. Contact Section
+12. Footer
+
+===================
+*/
+/* 
+===================
+
+1. Variables
+
+===================
+*/
+/* 
+===================
+
+2. Mixins
+
+===================
+*/
+/* 
+===================
+
+3. Resets
+
+===================
+*/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 
+===================
+
+4. Document Style
+
+==================
+*/
+body {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* 
+===================
+
+5. Header
+
+==================
+*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  padding: 0 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 9999;
+}
+
+header a .logo {
+  width: 4rem;
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+header nav a {
+  margin-left: 3rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease background-color;
+  transition: 0.5s ease background-color;
+}
+
+header nav a:hover, header nav a:focus {
+  background-color: #ff3a43;
+  color: white;
+}
+
+header #nav-toggle {
+  display: none;
+}
+
+/* Header Media Queries: */
+@media screen and (max-width: 768px) {
+  header nav {
+    position: fixed;
+    top: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    gap: 2rem;
+    right: 5rem;
+    background-color: white;
+    border-radius: 20px 0 20px 20px;
+    padding: 3rem;
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: 0.5s ease transform;
+    transition: 0.5s ease transform;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  header nav a {
+    background-color: transparent;
+    color: black;
+    margin-left: 0;
+  }
+  header nav a:hover {
+    background-color: #ff3a43;
+    color: white;
+  }
+  header #nav-toggle {
+    display: block;
+    font-size: 2rem;
+    background-color: #ff3a43;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .navbar {
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
+  }
+}
+
+/* 
+===================
+
+6. Hero Section
+
+==================
+*/
+#welcome-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 10rem;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  margin-top: 1rem;
+  min-height: 100vh;
+}
+
+#welcome-section .left-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 3rem;
+}
+
+#welcome-section .left-hero .hero-h1 {
+  font-size: 5rem;
+}
+
+#welcome-section .left-hero .hero-h1 .special-h1 {
+  font-style: italic;
+  color: #ff3a43;
+}
+
+#welcome-section .left-hero p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #323232;
+}
+
+#welcome-section .left-hero .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 2rem;
+}
+
+#welcome-section .left-hero .button-group button {
+  padding: 1rem 2rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease box-shadow;
+  transition: 0.5s ease box-shadow;
+}
+
+#welcome-section .left-hero .button-group button:nth-child(1) {
+  background-color: #ff3a43;
+  -webkit-box-shadow: inset 0 0 0 black;
+          box-shadow: inset 0 0 0 black;
+  color: white;
+}
+
+#welcome-section .left-hero .button-group button:nth-child(1):hover, #welcome-section .left-hero .button-group button:nth-child(1):focus {
+  -webkit-box-shadow: inset 300px 0 0 black;
+          box-shadow: inset 300px 0 0 black;
+}
+
+#welcome-section .left-hero .button-group button:nth-child(2) {
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: inset 0 0 0 black;
+          box-shadow: inset 0 0 0 black;
+}
+
+#welcome-section .left-hero .button-group button:nth-child(2):hover, #welcome-section .left-hero .button-group button:nth-child(2):focus {
+  -webkit-box-shadow: inset 0 -50px 0 black;
+          box-shadow: inset 0 -50px 0 black;
+  color: white;
+}
+
+#welcome-section .hero-illustration {
+  width: 50rem;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Hero Section Media Queries: */
+@media screen and (max-width: 768px) {
+  #welcome-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 15rem;
+    margin-bottom: 18rem;
+  }
+  #welcome-section .left-hero {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #welcome-section .hero-illustration {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #welcome-section {
+    padding: 3rem;
+  }
+}
+
+/* 
+===================
+
+7. Social Icons
+
+==================
+*/
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  gap: 2rem;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.23);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  -webkit-transition: 0.5s ease background-color;
+  transition: 0.5s ease background-color;
+  z-index: 9999;
+}
+
+.social-icons:hover, .social-icons:focus {
+  background-color: black;
+}
+
+.social-icons:hover, .social-icons:focus .social-icon {
+  -webkit-text-stroke: 0px black;
+}
+
+.social-icons .social-icon {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #ff3a43;
+  -webkit-text-stroke: 1px black;
+  -webkit-transition: 0.5s ease color;
+  transition: 0.5s ease color;
+}
+
+.social-icons .social-icon:hover, .social-icons .social-icon:focus {
+  color: white;
+}
+
+/* 
+===================
+
+8. About Section
+
+==================
+*/
+.about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 4rem;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: black;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 91%);
+          clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 91%);
+  padding: 13rem 0;
+  color: white;
+}
+
+.about-section .about-img {
+  width: 20rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.about-section .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 4rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.about-section .about-content .about-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.about-section .about-content .about-p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  width: 60%;
+  line-height: 30px;
+}
+
+/* 
+===================
+
+9. Skills Section
+
+==================
+*/
+.skills-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 10rem;
+  margin-top: 10rem;
+}
+
+.skills-section .skills-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.skills-section .callout-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+.skills-section .callout-div img {
+  width: 40rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.skills-section .callout-div .callout {
+  border: 2px solid black;
+  padding: 5rem;
+  border-radius: 50%;
+  width: 30%;
+  position: relative;
+  bottom: 10rem;
+  background-color: white;
+}
+
+.skills-section .callout-div .callout::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 50px solid black;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: rotate(60deg) scale(2);
+          transform: rotate(60deg) scale(2);
+}
+
+.skills-section .callout-div .callout .skills-p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Skills Section Media Queries: */
+@media screen and (max-width: 600px) {
+  .skills-section .callout-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6rem;
+  }
+  .skills-section .callout-div img {
+    width: 30rem;
+  }
+  .skills-section .callout-div .callout {
+    position: static;
+    width: 80%;
+  }
+  .skills-section .callout-div .callout::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 0px solid black;
+    position: static;
+  }
+}
+
+/* 
+===================
+
+10. Portfolio Section
+
+==================
+*/
+.portfolio-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin-top: 20rem;
+  gap: 5rem;
+}
+
+.portfolio-section .portfolio-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.portfolio-section .portfolio-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (30rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 30rem);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 10rem;
+  -webkit-column-gap: 30rem;
+          column-gap: 30rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  padding: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 2rem 0;
+}
+
+.portfolio-section .portfolio-items .portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  background-color: black;
+  border-radius: 30px;
+  padding: 4rem;
+  color: white;
+  gap: 3rem;
+  -webkit-box-shadow: 0 0 0 transparent;
+          box-shadow: 0 0 0 transparent;
+  -webkit-transition: 0.5s ease box-shadow;
+  transition: 0.5s ease box-shadow;
+}
+
+.portfolio-section .portfolio-items .portfolio-item:hover {
+  -webkit-box-shadow: 6px 6px 20px rgba(41, 41, 41, 0.39);
+          box-shadow: 6px 6px 20px rgba(41, 41, 41, 0.39);
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-img {
+  width: 30rem;
+  height: auto;
+  border-radius: 20px;
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  text-align: center;
+  gap: 2rem;
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link {
+  border: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: 1s ease background-color;
+  transition: 1s ease background-color;
+  color: black;
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link:hover, .portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link:focus {
+  background-color: #ff3a43;
+  color: white;
+}
+
+.portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link .portfolio-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* 
+===================
+
+11. Contact Section
+
+==================
+*/
+.contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin: 15rem 0;
+  gap: 8rem;
+}
+
+.contact-section .contact-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 5rem;
+}
+
+.contact-section form .first-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 2rem;
+}
+
+.contact-section form input, .contact-section form textarea {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 0 1rem;
+  border: none;
+  border-bottom: 3px solid black;
+  resize: vertical;
+  -webkit-transition: 0.5s ease border-bottom;
+  transition: 0.5s ease border-bottom;
+}
+
+.contact-section form input::-webkit-input-placeholder, .contact-section form textarea::-webkit-input-placeholder {
+  color: #595959;
+}
+
+.contact-section form input:-ms-input-placeholder, .contact-section form textarea:-ms-input-placeholder {
+  color: #595959;
+}
+
+.contact-section form input::-ms-input-placeholder, .contact-section form textarea::-ms-input-placeholder {
+  color: #595959;
+}
+
+.contact-section form input::placeholder, .contact-section form textarea::placeholder {
+  color: #595959;
+}
+
+.contact-section form input:hover, .contact-section form input:focus, .contact-section form textarea:hover, .contact-section form textarea:focus {
+  border-bottom: 3px solid #ff3a43;
+}
+
+.contact-section form input[type="submit"] {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff3a43;
+  color: white;
+  -webkit-box-shadow: inset 0 0 0 black;
+          box-shadow: inset 0 0 0 black;
+  -webkit-transition: 0.5s ease box-shadow;
+  transition: 0.5s ease box-shadow;
+  font-weight: 500;
+}
+
+.contact-section form input[type="submit"]:hover, .contact-section form input[type="submit"]:focus {
+  -webkit-box-shadow: inset 300px 0 0 black;
+          box-shadow: inset 300px 0 0 black;
+}
+
+/* Contact Section Media Queries: */
+@media screen and (max-width: 600px) {
+  .contact-section form .first-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 5rem;
+  }
+}
+
+/* 
+===================
+
+12. Footer
+
+==================
+*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: 2rem;
+  padding: 3rem 0 5rem;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+footer .footer-link {
+  text-decoration: none;
+  color: #ff3a43;
+  -webkit-transition: 0.5s ease color;
+  transition: 0.5s ease color;
+  font-weight: 500;
+}
+
+footer .footer-link:hover, footer .footer-link:focus {
+  color: black;
+}
+
+/* Footer Media Queries: */
+@media screen and (max-width: 768px) {
+  footer {
+    margin-bottom: 10rem;
+  }
+}

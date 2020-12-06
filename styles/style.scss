@@ -1,0 +1,674 @@
+/* 
+===================
+
+* Welcome! Here is an index for you:
+
+1. Variables
+2. Mixins
+3. Resets
+4. Document Style
+5. Header
+6. Hero Section
+7. Social Icons
+8. About Section
+9. Skills Section
+10. Portfolio Section
+11. Contact Section
+12. Footer
+
+===================
+*/
+
+
+
+/* 
+===================
+
+1. Variables
+
+===================
+*/
+
+@import "variables";
+
+
+/* 
+===================
+
+2. Mixins
+
+===================
+*/
+
+@import "mixins";
+
+
+/* 
+===================
+
+3. Resets
+
+===================
+*/
+
+@import "reset";
+
+
+
+/* 
+===================
+
+4. Document Style
+
+==================
+*/
+
+body {
+    background: $bg-color;
+    font-family: $font-family;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* 
+===================
+
+5. Header
+
+==================
+*/
+
+header {
+    @include flex(row, space-between, center);
+    padding: 0 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: white;
+    z-index: 9999;
+
+    a {
+        .logo {
+            width: 4rem;
+            vertical-align: middle;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    nav {
+
+        a {
+            margin-left: 3rem;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 500;
+            background-color: white;
+            color: $secondary-color;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: 0.5s ease background-color;
+
+            &:hover, &:focus {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+}
+
+
+/* Header Media Queries: */
+
+@media screen and (max-width: 768px) {
+    header {
+
+        nav {
+            position: fixed;
+            top: 10rem;
+            @include flex(column, center, flex-end);
+            gap: 2rem;
+            right: 5rem;
+            background-color: white;
+            border-radius: 20px 0 20px 20px;
+            padding: 3rem;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+            transform: scale(0);
+            transition: 0.5s ease transform;
+            transform-origin: top right;
+
+            a {
+                background-color: transparent;
+                color: $secondary-color;
+                margin-left: 0;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
+        }
+
+        #nav-toggle {
+            display: block;
+            font-size: 2rem;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        .navbar {
+            transform: scale(1) !important;
+        }
+    }
+}
+
+
+/* 
+===================
+
+6. Hero Section
+
+==================
+*/
+
+#welcome-section {
+    @include flex(row, center, center);
+    gap: 10rem;
+    flex-wrap: wrap-reverse;
+    margin-top: 1rem;
+    min-height: 100vh;
+
+
+    .left-hero {
+        @include flex(column, center, stretch);
+        gap: 3rem;
+
+        .hero-h1 {
+            font-size: 5rem;
+
+            .special-h1 {
+                font-style: italic;
+                color: $primary-color;
+            }
+        }
+        
+        p {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #323232;
+        }
+
+        .button-group {
+            @include flex(row, flex-start, center);
+            gap: 2rem;
+
+            button {
+                padding: 1rem 2rem;
+                border: none;
+                font-family: $font-family;
+                font-weight: 500;
+                font-size: 1.6rem;
+                border-radius: 5px;
+                transition: 0.5s ease box-shadow;
+              
+                
+                &:nth-child(1) {
+                    background-color: $primary-color;
+                    box-shadow: inset 0 0 0 $secondary-color;
+                    color: white;
+
+                    &:hover, &:focus {
+                        box-shadow: inset 300px 0 0 $secondary-color;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: white;
+                    color: $secondary-color;
+                    box-shadow: inset 0 0 0 $secondary-color;
+
+                    &:hover, &:focus {
+                       box-shadow: inset 0 -50px 0 $secondary-color;
+                       color: white;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+
+    .hero-illustration {
+        width: 50rem;
+        height: auto;
+        max-width: 100%;
+    }   
+    
+}
+
+/* Hero Section Media Queries: */
+
+@media screen and (max-width: 768px) {
+    #welcome-section {
+        flex-direction: column-reverse;
+        margin-top: 15rem;
+        margin-bottom: 18rem;
+
+        .left-hero {
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-illustration {
+            width: 40rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #welcome-section {
+        padding: 3rem;
+    }
+}
+/* 
+===================
+
+7. Social Icons
+
+==================
+*/
+
+.social-icons {
+    @include flex(row, center, center);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    gap: 2rem;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    transition: 0.5s ease background-color;
+    z-index: 9999;
+
+    &:hover, &:focus {
+        background-color: $secondary-color;
+    }
+
+    &:hover, &:focus .social-icon {
+        -webkit-text-stroke: 0px $secondary-color;
+    }
+
+    .social-icon {
+        font-size: 3rem;
+        text-decoration: none;
+        color: $primary-color;
+        -webkit-text-stroke: 1px $secondary-color;
+        transition: 0.5s ease color;
+
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+}
+
+
+/* 
+===================
+
+8. About Section
+
+==================
+*/
+
+
+.about-section {
+    @include flex(column, center, center);
+    gap: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: $secondary-color;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 91%);
+    padding: 13rem 0;
+    color: white;
+
+    .about-img {
+        width: 20rem;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .about-content {
+        @include flex(column, center, center);
+        gap: 4rem;
+        margin-top: 3rem;
+        text-align: center;
+
+        .about-h2 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .about-p {
+            font-size: 1.6rem;
+            font-weight: normal;
+            width: 60%;
+            line-height: 30px;
+        }
+    }
+}
+
+
+/* 
+===================
+
+9. Skills Section
+
+==================
+*/
+
+.skills-section {
+    @include flex(column, center, center);
+    gap: 10rem;
+    margin-top: 10rem;
+
+    .skills-h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .callout-div {
+        @include flex(row, center, center);
+
+        img {
+            width: 40rem;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .callout {
+            border: 2px solid $secondary-color;
+            padding: 5rem;
+            border-radius: 50%;
+            width: 30%;
+            position: relative;
+            bottom: 10rem;
+            background-color: white;
+
+            &::before {
+                content: '';
+                width: 0; 
+                height: 0; 
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 50px solid rgb(0, 0, 0);
+                position: absolute;
+                bottom: 2rem;
+                left: 0;
+                z-index: -1;
+                transform: rotate(60deg) scale(2);
+            }
+
+            .skills-p {
+                font-size: 1.6rem;
+                font-weight: 500;
+                font-style: italic;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+/* Skills Section Media Queries: */
+
+@media screen and (max-width: 600px) {
+    .skills-section {
+        .callout-div {
+            flex-direction: column;
+            gap: 6rem;
+
+            img {
+                width: 30rem;
+            }
+
+            .callout {
+                position: static;
+                width: 80%;
+
+                &::before {
+                    content: '';
+                    width: 0; 
+                    height: 0; 
+                    border-left: 0px solid transparent;
+                    border-right: 0px solid transparent;
+                    border-top: 0px solid rgb(0, 0, 0);
+                    position: static;
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+===================
+
+10. Portfolio Section
+
+==================
+*/
+
+.portfolio-section {
+    @include flex(column, center, center);
+    margin-top: 20rem;
+    gap: 5rem;
+
+    .portfolio-h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .portfolio-items {
+        @include grid(repeat(auto-fit, 30rem), auto, 10rem, 30rem, center, center);
+        width: 90%;
+        padding: 2rem;
+        justify-content: center;
+        align-content: center;
+        padding: 2rem 0;
+
+        .portfolio-item {
+            @include flex(column, center, center);
+            background-color: $secondary-color;
+            border-radius: 30px;
+            padding: 4rem;
+            color: white;
+            gap: 3rem;
+            box-shadow: 0 0 0 transparent;
+            transition: 0.5s ease box-shadow;
+
+            &:hover {
+                box-shadow: 6px 6px 20px rgba(41, 41, 41, 0.39);
+            }
+
+            .portfolio-img {
+                width: 30rem;
+                height: auto;
+                // max-width: 180%;
+                border-radius: 20px;
+            }
+
+            .portfolio-details {
+                @include flex(column, center, center);
+                text-align: center;
+                gap: 2rem;
+
+                .portfolio-title {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+
+                .portfolio-link {
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.4rem;
+                    font-family: $font-family;
+                    font-weight: 500;
+                    background-color: white;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    transition: 1s ease background-color ;
+                    color: $secondary-color;
+
+                    &:hover, &:focus {
+                        background-color: $primary-color;
+                        color: white;
+                    }
+
+
+
+                    .portfolio-link {
+                        text-decoration: none;
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/* 
+===================
+
+11. Contact Section
+
+==================
+*/
+
+.contact-section {
+    @include flex(column, center, center);
+    margin: 15rem 0;
+    gap: 8rem;
+
+    .contact-h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+
+    }
+
+    form {
+        @include flex(column, center, stretch);
+        gap: 5rem;
+
+        .first-form {
+            @include flex(row, center, center);
+            gap: 2rem;
+        }
+
+        input, textarea {
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-family: $font-family;
+            padding: 2rem 0 1rem;
+            border: none;
+            border-bottom: 3px solid $secondary-color;
+            resize: vertical;
+            transition: 0.5s ease border-bottom;
+
+            &::placeholder {
+                color: #595959;
+            }
+
+            &:hover, &:focus {
+                border-bottom: 3px solid $primary-color;
+            }
+        }
+
+        input[type="submit"] {
+            align-self: center;
+            padding: 1.5rem 2rem;
+            border-radius: 5px;
+            border: none;
+            background-color: $primary-color;
+            color: white;
+            box-shadow: inset 0 0 0 $secondary-color;
+            transition: 0.5s ease box-shadow;
+            font-weight: 500;
+
+            &:hover, &:focus {
+                box-shadow: inset 300px 0 0 $secondary-color;
+            }
+        }
+    }
+}
+
+/* Contact Section Media Queries: */
+
+@media screen and (max-width: 600px) {
+    .contact-section {
+        form {
+
+            .first-form {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 5rem;
+            }
+        }
+    }
+}
+
+
+/* 
+===================
+
+12. Footer
+
+==================
+*/
+
+footer {
+    @include flex(column, center, center);
+    gap: 2rem;
+    padding: 3rem 0 5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+
+    .footer-link {
+        text-decoration: none;
+        color: $primary-color;
+        transition: 0.5s ease color;
+        font-weight: 500;
+
+        &:hover, &:focus {
+            color: $secondary-color;
+        }
+    }
+}
+
+/* Footer Media Queries: */ 
+
+@media screen and (max-width: 768px) {
+    footer {
+        margin-bottom: 10rem;
+    }
+}

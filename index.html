@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/52fd14e814.js" crossorigin="anonymous"></script>
+    <title>Paulson J Paul | Creative Web Developer & UI/UX Designer</title>
+    <meta name="description" content="I am Paulson J Paul, a creative and self-taught Web Developer and UI/UX Designer. My hobbies include coding, watching YouTube videos and watching SpiderMan movies.">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ff3a43">
+    <meta name="apple-mobile-web-app-title" content="Paulson J Paul">
+    <meta name="application-name" content="Paulson J Paul">
+    <meta name="msapplication-TileColor" content="#ff3a43">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="navbar">
+        <a href="#"><img src="images/Logo.svg" alt="Logo" class="logo"></a>
+        <nav id="navbar" class="navbar">
+            <a href="#">Home</a>
+            <a href="#about-section">Who I Am</a>
+            <a href="#skills-section">What I Know</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#contact-section">Get In Touch</a>
+        </nav>
+        <button type="button" id="nav-toggle" class="fas fa-hamburger" onclick="showNav()"></button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="welcome-section">
+        <div class="left-hero">
+            <h1 class="hero-h1">Paulson <span class="special-h1">J</span> Paul</h1>
+            <p>I do some creative stuff</p>
+            <div class="button-group">
+                <button type="button" onclick="document.location.href='#about-section'">What Stuff?</button>
+                <button type="button" onclick="document.location.href='#projects'">View Portfolio</button>
+            </div>
+        </div>
+
+        <img src="images/Hero Illustration.svg" alt="Paulson J Paul" class="hero-illustration">
+    </section>
+
+    <!-- Social Icons -->
+    <section class="social-icons">
+        <a href="https://github.com/paulsonjpaul" target="_blank" title="GitHub" class="fab fa-github social-icon" id="profile-link"></a>
+        <a href="https://codepen.io/paulsonjpaul" target="_blank" title="CodePen" class="fab fa-codepen social-icon"></a>
+        <a href="https://www.freecodecamp.org/paulsonjpaul" target="_blank" title="freeCodeCamp" class="fab fa-free-code-camp social-icon"></a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about-section">
+        <img src="images/About Illustration.svg" alt="Who I Am" class="about-img">
+        <div class="about-content">
+            <h2 class="about-h2">Who I Am</h2>
+            <p class="about-p">I know what’s going on in your head. You are probably wondering who I am. I am Paulson, a
+                creative and self-taught to-be Web
+                Developer and UI/UX Designer. My hobbies include coding, watching YouTube videos and watching SpiderMan
+                movies.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills-section">
+        <h2 class="skills-h2">What I Know</h2>
+        <div class="callout-div">
+            <img src="images/Callout Illustration.svg" alt="What I Know" class="skills-img">
+            <div class="callout">
+                <p class="skills-p">I currently know HTML & CSS. I am walking through the JS, PHP & SQL paths now!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="projects">
+        <h2 class="portfolio-h2">Portfolio!!!</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item project-tile">
+                <img class="portfolio-img" src="images/landing_page.png" alt="Tribute Page">
+                <div class="portfolio-details">
+                    <h3 class="portfolio-title">Tribute Page</h3>
+                    <a href="https://codepen.io/paulsonjpaul/full/YzWXjOQ" target="_blank" class="portfolio-link">View It</a>
+                </div>
+            </div>
+            <div class="portfolio-item project-tile">
+                <img class="portfolio-img" src="images/landing_page.png" alt="Techincal Documentation">
+                <div class="portfolio-details">
+                    <h3 class="portfolio-title">Techincal Documentation</h3>
+                    <a href="https://codepen.io/paulsonjpaul/full/NWrrqzK" target="_blank" class="portfolio-link">View It</a>
+                </div>
+            </div>
+            <div class="portfolio-item project-tile">
+                <img class="portfolio-img" src="images/landing_page.png" alt="Survey Form">
+                <div class="portfolio-details">
+                    <h3 class="portfolio-title">Survey Form</h3>
+                    <a href="https://codepen.io/paulsonjpaul/full/gOMammd" target="_blank" class="portfolio-link">View It</a>
+                </div>
+            </div>
+            <div class="portfolio-item project-tile">
+                <img class="portfolio-img" src="images/landing_page.png" alt="Product Landing">
+                <div class="portfolio-details">
+                    <h3 class="portfolio-title">Product Landing</h3>
+                    <a href="https://codepen.io/paulsonjpaul/full/bGeVXaZ" target="_blank" class="portfolio-link">View It</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-section">
+        <h2 class="contact-h2">Get In Touch</h2>
+        <form action="#">
+            <div class="first-form">
+                <input type="text" placeholder="Name" id="name">
+                <input type="email" placeholder="Email" id="email">
+            </div>
+            <textarea placeholder="Message" id="message" rows="3"></textarea>
+            <input type="submit" value="Send a Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-p">Made with 💖 by <a href="https://github.com/paulsonjpaul" target="_blank" class="footer-link">Paulson J Paul</a> | All rights reserved</p>
+        <p class="footer-p">Illustrations provided for free by <a href="https://www.manypixels.co/gallery/" target="_blank" class="footer-link">ManyPixels</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
