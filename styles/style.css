@@ -133,7 +133,7 @@ header #nav-toggle {
 }
 
 /* Header Media Queries: */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   header nav {
     position: fixed;
     top: 10rem;
@@ -186,7 +186,7 @@ header #nav-toggle {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 850px) {
   header .navbar {
     -webkit-transform: scale(1) !important;
             transform: scale(1) !important;
@@ -319,7 +319,7 @@ header #nav-toggle {
 }
 
 /* Hero Section Media Queries: */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   #welcome-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -916,7 +916,7 @@ footer .footer-link:hover, footer .footer-link:focus {
 }
 
 /* Footer Media Queries: */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   footer {
     margin-bottom: 10rem;
   }
