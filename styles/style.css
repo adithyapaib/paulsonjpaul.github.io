@@ -183,6 +183,7 @@ header #nav-toggle {
     border: none;
     padding: 1rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 
@@ -285,6 +286,7 @@ header #nav-toggle {
   border-radius: 5px;
   -webkit-transition: 0.5s ease box-shadow;
   transition: 0.5s ease box-shadow;
+  cursor: pointer;
 }
 
 #welcome-section .left-hero .button-group button:nth-child(1) {
@@ -397,6 +399,7 @@ header #nav-toggle {
   -webkit-text-stroke: 1px black;
   -webkit-transition: 0.5s ease color;
   transition: 0.5s ease color;
+  cursor: pointer;
 }
 
 .social-icons .social-icon:hover, .social-icons .social-icon:focus {
@@ -724,16 +727,12 @@ header #nav-toggle {
   -webkit-transition: 1s ease background-color;
   transition: 1s ease background-color;
   color: black;
+  cursor: pointer;
 }
 
 .portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link:hover, .portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link:focus {
   background-color: #ff3a43;
   color: white;
-}
-
-.portfolio-section .portfolio-items .portfolio-item .portfolio-details .portfolio-link .portfolio-link {
-  text-decoration: none;
-  color: black;
 }
 
 /* 
@@ -853,6 +852,7 @@ header #nav-toggle {
   -webkit-transition: 0.5s ease box-shadow;
   transition: 0.5s ease box-shadow;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .contact-section form input[type="submit"]:hover, .contact-section form input[type="submit"]:focus {
