@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 70rem;
+        }
+
+        .text-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 3rem;
+            width: 40%;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                margin: 8rem 0;
+            }
+
+            .text-div {
+                align-items: center;
+                text-align: center;
+            }
+
+            img {
+                width: 40rem;
+            }
+        }
+
+        .text-div h1 {
+            font-size: 6rem;
+            font-weight: 600;
+        }
+
+        .text-div p {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 4rem;
+        }
+
+        .text-div button {
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            background-color: #ff3a43;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            box-shadow: inset 0 0 0 black;
+            cursor: pointer;
+            transition: 0.5s ease box-shadow;
+        }
+
+        .text-div button:hover {
+            box-shadow: inset 300px 0 black;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/52fd14e814.js" crossorigin="anonymous"></script>
+    <title>Oops! That Page Couldn't Be Found!</title>
+    <meta name="description"
+        content="I am Paulson J Paul, a creative and self-taught Web Developer and UI/UX Designer. My hobbies include coding, watching YouTube videos and watching SpiderMan movies.">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ff3a43">
+    <meta name="apple-mobile-web-app-title" content="Paulson J Paul">
+    <meta name="application-name" content="Paulson J Paul">
+    <meta name="msapplication-TileColor" content="#ff3a43">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <img src="images/presentation 1.svg" alt="404">
+    <div class="text-div">
+        <h1>Oops!</h1>
+        <p>The page you were trying to enter was not found. Perhaps there is a spelling mistake?</p>
+        <button type="button" onclick="document.location.href = 'index.html'">Go Home</button>
+    </div>
+</body>
+
+</html>
