@@ -735,6 +735,14 @@ header #nav-toggle {
   color: white;
 }
 
+/* Portfolio Section Media Queries: */
+@media screen and (max-width: 600px) {
+  .portfolio-section .portfolio-items .portfolio-item .portfolio-img {
+    width: 20rem;
+    border-radius: 10px;
+  }
+}
+
 /* 
 ===================
 

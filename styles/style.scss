@@ -514,7 +514,6 @@ header {
             .portfolio-img {
                 width: 30rem;
                 height: auto;
-                // max-width: 180%;
                 border-radius: 20px;
             }
 
@@ -553,6 +552,20 @@ header {
 
 }
 
+/* Portfolio Section Media Queries: */
+
+@media screen and (max-width: 600px) {
+    .portfolio-section {
+        .portfolio-items {
+            .portfolio-item {
+                .portfolio-img {
+                    width: 20rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
 
 /* 
 ===================
