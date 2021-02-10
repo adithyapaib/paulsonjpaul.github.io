@@ -15,6 +15,7 @@
 10. Portfolio Section
 11. Contact Section
 12. Footer
+13. Scroll Bar
 
 ===================
 */
@@ -684,3 +685,18 @@ footer {
         margin-bottom: 10rem;
     }
 }
+13. Scroll Bar
+
+==================
+::-webkit-scrollbar {
+     width: 15px;
+     border-radius: 3px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+     background: $#ff3a43;
+     border-radius: 5px;
+   }
+   ::-webkit-scrollbar-track {
+    background: white;
+  }
